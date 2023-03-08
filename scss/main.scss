@@ -1,0 +1,29 @@
+// Zadanie 1
+.blocks {
+	box-sizing: border-box;
+	display: flex;
+	margin: 0;
+	@media only screen and (max-width: 450px) {
+		flex-direction: column;
+		.block:last-child {
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 450px) and (max-width: 720px) {
+		.block:first-child {
+			display: none;
+		}
+	}
+	@media only screen and (min-width: 720px) and (max-width: 1024px) {
+		.block:nth-child(2),
+		.block:nth-child(3),
+		.block:nth-child(4) {
+			display: none;
+		}
+	}
+}
+.block {
+	width: 25%;
+	height: 100vh;
+	border: 1px solid red;
+}
